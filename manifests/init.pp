@@ -34,7 +34,12 @@
 #
 # Copyright 2015 cloudBuy PLC
 #
-class galera {
+class galera(
+  $manage_repo = true
+){
 
+  if ($manage_repo) {
+    include ::galera::repo
+  }
 
 }
