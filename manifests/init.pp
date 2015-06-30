@@ -35,11 +35,26 @@
 # Copyright 2015 cloudBuy PLC
 #
 class galera(
-  $manage_repo = true
+  $manage_repo = true,
+  $manage_package = true,
 ){
 
   if ($manage_repo) {
     include ::galera::repo
+  }
+
+  if ($manage_package) {
+    package { 'galera-3':
+      ensure => present,
+    }
+
+    package { 'galera-arbitrator-3':
+      ensure => present,
+    }
+
+    package { 'mysql-wsrep-5.6':
+      ensure => present,
+    }
   }
 
 }
