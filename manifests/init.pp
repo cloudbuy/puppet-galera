@@ -56,6 +56,8 @@ class galera(
       ensure => present,
       alias  => 'mysql-server'
     }
+
+    Package['mysql-server'] -> Service['mysqld']
   }
 
 }
