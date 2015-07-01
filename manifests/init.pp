@@ -36,14 +36,14 @@
 #
 class galera(
   $manage_repo = true,
-  $manage_package = true,
+  $package_manage = true,
 ){
 
   if ($manage_repo) {
     include ::galera::repo
   }
 
-  if ($manage_package) {
+  if ($package_manage) {
     package { 'galera-3':
       ensure => present,
     }
@@ -52,8 +52,9 @@ class galera(
       ensure => present,
     }
 
-    package { 'mysql-wsrep-5.6':
+    package { 'mysql-wsrep-server-5.6':
       ensure => present,
+      alias  => 'mysql-server'
     }
   }
 
