@@ -51,13 +51,6 @@ class galera(
     package { 'galera-arbitrator-3':
       ensure => present,
     }
-
-    package { 'mysql-wsrep-server-5.6':
-      ensure => present,
-      alias  => 'mysql-server'
-    }
-
-    Package['mysql-server'] -> Service['mysqld']
   }
 
 }
