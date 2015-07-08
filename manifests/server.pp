@@ -25,6 +25,8 @@ class galera::server (
   $databases               = {},
 ) inherits mysql::params {
 
+  include galera::repo
+
   class { 'mysql::server':
     config_file             => $config_file,
     includedir              => $includedir,
