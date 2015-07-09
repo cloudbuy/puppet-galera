@@ -3,7 +3,7 @@ class galera::repo {
   case ($::osfamily) {
     'Debian': {
       apt::key { 'galera':
-        id     => '0xcbcb082a1bb943db',
+        id     => '199369E5404BD5FC7D2FE43BCBCB082A1BB943DB',
         server => 'keyserver.ubuntu.com',
       }
 
