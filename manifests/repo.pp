@@ -8,7 +8,7 @@ class galera::repo {
       }
 
       apt::source { 'galera':
-        location => 'http://lon1.mirrors.digitalocean.com/mariadb/repo/10.0/ubuntu/',
+        location => 'http://lon1.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu/',
         repos    => 'main',
       }
 
