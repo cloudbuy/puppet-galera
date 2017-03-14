@@ -44,7 +44,7 @@ class galera::server (
     root_password           => $root_password,
     service_enabled         => $service_enabled,
     service_manage          => $service_manage,
-    service_name            => 'mysql',
+    service_name            => 'mariadb',
     service_provider        => $service_provider,
     create_root_user        => $create_root_user,
     create_root_my_cnf      => $create_root_my_cnf,
