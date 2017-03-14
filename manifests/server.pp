@@ -33,7 +33,7 @@ class galera::server (
     install_options         => $install_options,
     manage_config_file      => $manage_config_file,
     override_options        => $override_options,
-    package_name            => 'mariadb-galera-server',
+    package_name            => 'mariadb-server',
     package_ensure          => $package_ensure,
     package_manage          => $package_manage,
     purge_conf_dir          => $purge_conf_dir,
